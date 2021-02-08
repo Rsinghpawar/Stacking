@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transLucent">#80000000</color>
+    <color name="lightGray">#F9F9F9</color>
+    <color name="darkGray">#4B4B4B</color>
+
+    <color name="boldPink">#FF3366</color>
+    <color name="greyDarkest">#131313</color>
+    <color name="greyLightest">#2D2D2D</color>
+
+
+
+    <color name="checkdChipBackgroundColor">#8DFF3366</color>
+    <color name="checkedChipTextColor">@color/boldPink</color>
+    <color name="chipBackgroundColor">@color/greyLightest</color>
+    <color name="chipTextColor">@color/white</color>
+</resources>

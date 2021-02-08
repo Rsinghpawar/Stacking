@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000"
+    android:id="@+id/bottom_sheet_2"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    android:animateLayoutChanges="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#00000000"/>
+
+    <View
+        android:id="@+id/view_get_sheet_1_click_sheet2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#00000000"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/sheet_shape_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sheet 2"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dimen_26dp"
+            android:layout_marginStart="@dimen/dimen_26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:background="@drawable/custom_selective_corner"
+            android:id="@+id/btn_sheet_2"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:text="Open sheet 2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view_sheet_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@drawable/back_dim_grey"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
