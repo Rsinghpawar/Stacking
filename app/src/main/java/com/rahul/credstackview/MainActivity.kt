@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.transition.Fade
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
@@ -80,7 +81,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setClickListeners() {
-        findViewById<MaterialButton>(R.id.btn_show_sheet_1).setOnClickListener {
+        findViewById<AppCompatButton>(R.id.btn_show_sheet_1).setOnClickListener {
             if (sheet1.state == BottomSheetBehavior.STATE_COLLAPSED)
                 sheet1.state = BottomSheetBehavior.STATE_EXPANDED
         }

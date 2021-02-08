@@ -20,7 +20,7 @@
         android:id="@+id/view_get_sheet_1_click_sheet2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#00000000"/>
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:background="@drawable/sheet_shape_2"
@@ -28,14 +28,15 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/dimen_26dp"
             android:text="Sheet 2"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:layout_marginTop="@dimen/dimen_26dp"
-            android:layout_marginStart="@dimen/dimen_26dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,17 +45,42 @@
             android:id="@+id/btn_sheet_2"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:text="Open sheet 2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap to continoue"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_sheet_2"
+            app:layout_constraintTop_toTopOf="@+id/btn_sheet_2"
+            app:layout_constraintVertical_bias="0.45999998" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="How many plates?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2" />
+
 
         <View
             android:id="@+id/view_sheet_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
-            android:background="@drawable/back_dim_grey"/>
+           />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

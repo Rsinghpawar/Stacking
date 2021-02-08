@@ -2,41 +2,79 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/col_root"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:animateLayoutChanges="true"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".MainActivity"
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    >
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/greyLightest"
+        app:layoutDescription="@xml/activity_cred_demo_xml_constraintlayout_scene">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_show_sheet_1"
-            android:layout_width="0dp"
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#006EC3"
-            android:text="show sheet 1"
-            android:layout_marginEnd="@dimen/dimen_32dp"
-            android:layout_marginStart="@dimen/dimen_32dp"
-            app:layout_constraintVertical_bias=".6"
+            android:text="CRED TEST"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_30sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_60dp"
+            android:layout_marginTop="@dimen/dimen_18dp"
+            android:layout_marginEnd="@dimen/dimen_60dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="CRED is an awesome company, the UI of their app is awesome, I would love to pe a part of such a great team, I'll be able to learn a lot."
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_show_sheet_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_35dp"
+            android:layout_marginEnd="@dimen/dimen_35dp"
+            android:background="@drawable/round_button"
+            android:padding="@dimen/dimen_30dp"
+            android:text="Order Food"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_desc"
+            app:layout_constraintVertical_bias=".6" />
+
         <View
             android:id="@+id/view_root"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
-            android:background="@color/transLucent"/>
+            android:background="@color/transLucent"
+            android:visibility="gone" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
     <include layout="@layout/sheet_1" />
-    <include layout="@layout/sheet_2"/>
-    <include layout="@layout/sheet_3"/>
+
+    <include layout="@layout/sheet_2" />
+
+    <include layout="@layout/sheet_3" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
