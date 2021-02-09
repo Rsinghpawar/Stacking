@@ -14,7 +14,7 @@
     <View
         android:id="@+id/view_get_sheet_root_click"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/dimen_110dp"
         android:background="#00000000"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -176,12 +176,12 @@
         </HorizontalScrollView>
 
         <TextView
-            android:textColor="@color/white"
             android:id="@+id/dietType_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="@string/diet_type"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/dietType_scrollView"
@@ -274,17 +274,17 @@
         </HorizontalScrollView>
 
 
-
         <ImageView
-            android:background="@drawable/transition_background"
             android:id="@+id/btn_sheet_1"
             android:layout_width="0dp"
             android:layout_height="80dp"
+            android:background="@drawable/transition_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tap to continoue"
@@ -305,7 +305,7 @@
             app:layoutDescription="@xml/sheet_1_xml_view_sheet_1_scene"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="visible">
+            tools:visibility="gone">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"
@@ -361,7 +361,6 @@
                 app:layout_constraintTop_toTopOf="@+id/txt_selected_diet" />
 
         </androidx.constraintlayout.motion.widget.MotionLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

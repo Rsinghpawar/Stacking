@@ -71,12 +71,6 @@
             app:layout_constraintTop_toTopOf="@+id/tv_desc"
             app:layout_constraintVertical_bias=".6" />
 
-        <View
-            android:id="@+id/view_root"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/transLucent"
-            android:visibility="gone" />
 
     </androidx.constraintlayout.motion.widget.MotionLayout>
 

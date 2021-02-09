@@ -166,6 +166,7 @@ class ActivityCredDemo : AppCompatActivity() {
 
                 when (newState) {
                     BottomSheetBehavior.STATE_SETTLING , BottomSheetBehavior.STATE_COLLAPSED -> binding.constraintLayout.transitionToEnd()
+
                 }
 
             }
@@ -230,31 +231,5 @@ class ActivityCredDemo : AppCompatActivity() {
         sheet3 = BottomSheetBehavior.from(sheet3Binding.bottomSheet3)
     }
 
-    private fun toggleOn(view: View) {
-        val transition: TransitionSet = TransitionSet().apply {
-            addTransition(Fade())
-            addTransition(Slide())
-        }
-        transition.apply {
-            duration = 500
-            addTarget(view)
-            TransitionManager.beginDelayedTransition(view as ViewGroup)
-        }
-
-        view.visibility = View.VISIBLE
-    }
-
-    private fun toggleOff(view: View) {
-        val transition: TransitionSet = TransitionSet().apply {
-            addTransition(Fade())
-            addTransition(Slide())
-        }
-        transition.apply {
-            duration = 500
-            addTarget(view)
-            TransitionManager.beginDelayedTransition(view as ViewGroup)
-        }
-        view.visibility = View.GONE
-    }
 
 }
