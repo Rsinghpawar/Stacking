@@ -24,36 +24,66 @@
         android:layout_height="@dimen/dimen_90dp"
         />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/sheet_shape_1"
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/sheet_shape_1"
+        app:layoutDescription="@xml/sheet_3_xml_constraintlayout2_scene">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_sheet3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sheet 3"
-            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_26dp"
+            android:text="Bill"
+            android:textColor="@color/boldPink"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:layout_marginTop="@dimen/dimen_26dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/total"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sheet3" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="1399 INR"
+            android:textColor="@color/boldPink"
+            android:textSize="@dimen/dimen_30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tv_total"
+            app:layout_constraintStart_toStartOf="@+id/tv_total"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total" />
+
+
         <ImageView
-            android:background="@drawable/custom_selective_corner"
             android:id="@+id/btn_sheet_3"
             android:layout_width="0dp"
             android:layout_height="80dp"
+            android:background="@drawable/transition_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tap to close"
+            android:text="@string/tap_to_pay"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -67,9 +97,8 @@
             android:id="@+id/view_sheet_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
-           />
+            android:visibility="gone" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 
 </LinearLayout>

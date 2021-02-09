@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@color/white"
-    tools:context=".MainActivity"
+    tools:context=".ActivityCredDemo"
 
     >
 
@@ -15,15 +14,24 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/greyLightest"
         app:layoutDescription="@xml/activity_cred_demo_xml_constraintlayout_scene">
 
+        <ImageView
+            android:id="@+id/img_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/unsplash"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CRED TEST"
+            android:text="@string/cred_test"
             android:textColor="@color/white"
             android:textSize="@dimen/dimen_30sp"
             android:textStyle="bold"
@@ -41,7 +49,7 @@
             android:layout_marginEnd="@dimen/dimen_60dp"
             android:gravity="center"
             android:lineSpacingExtra="5dp"
-            android:text="CRED is an awesome company, the UI of their app is awesome, I would love to pe a part of such a great team, I'll be able to learn a lot."
+            android:text="@string/cred_is_an_awesome_company_the_ui_of_their_app_is_awesome_i_would_love_to_pe_a_part_of_such_a_great_team_i_ll_be_able_to_learn_a_lot"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +63,7 @@
             android:layout_marginEnd="@dimen/dimen_35dp"
             android:background="@drawable/round_button"
             android:padding="@dimen/dimen_30dp"
-            android:text="Order Food"
+            android:text="@string/order_food"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,9 +80,15 @@
 
     </androidx.constraintlayout.motion.widget.MotionLayout>
 
-    <include layout="@layout/sheet_1" />
+    <include
+        android:id="@+id/sheetOne"
+        layout="@layout/sheet_1" />
 
-    <include layout="@layout/sheet_2" />
+    <include
+        android:id="@+id/sheetTwo"
+        layout="@layout/sheet_2" />
 
-    <include layout="@layout/sheet_3" />
+    <include
+        android:id="@+id/sheetThree"
+        layout="@layout/sheet_3" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

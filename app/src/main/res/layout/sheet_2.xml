@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
     android:background="#00000000"
-    android:id="@+id/bottom_sheet_2"
     android:orientation="vertical"
     app:behavior_hideable="true"
     app:behavior_peekHeight="0dp"
-    android:animateLayoutChanges="true"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#00000000"/>
+        android:background="#00000000" />
 
     <View
         android:id="@+id/view_get_sheet_1_click_sheet2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        />
+        android:layout_height="100dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/sheet_shape_2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/sheet_shape_2">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/appCompatTextView2"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="@dimen/dimen_26dp"
-            android:text="Sheet 2"
+            android:text="Quantity"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:textStyle="bold"
@@ -41,10 +41,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:background="@drawable/custom_selective_corner"
             android:id="@+id/btn_sheet_2"
             android:layout_width="0dp"
             android:layout_height="80dp"
+            android:background="@drawable/custom_selective_corner"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -52,7 +52,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tap to continoue"
+            android:text="@string/tap_to_continue"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -64,23 +64,59 @@
 
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="How many plates?"
+            android:text="@string/how_many_plates"
             android:textColor="@color/white"
             android:textSize="@dimen/dimen_24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2" />
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_sheet2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dimen_30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_sheet_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <View
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
             android:id="@+id/view_sheet_2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-           />
+            android:layout_height="@dimen/dimen_130dp"
+            android:visibility="visible"
+            app:layoutDescription="@xml/sheet_2_xml_view_sheet_2_scene"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_selected_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Selected Plated 2"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.41" />
+
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

@@ -30,4 +30,15 @@
     <string name="breakfast">Breakfast</string>
     <string name="saled">Saled</string>
     <string name="appetizer">Appetizer</string>
+    <string name="cred_test">CRED TEST</string>
+    <string name="cred_is_an_awesome_company_the_ui_of_their_app_is_awesome_i_would_love_to_pe_a_part_of_such_a_great_team_i_ll_be_able_to_learn_a_lot">CRED is an awesome company, the UI of their app is awesome, I would love to pe a part of such a great team, I\'ll be able to learn a lot.</string>
+    <string name="order_food">Order Food</string>
+
+    <string name="plates_quantity">Selected Plates : %1$d</string>
+    <string name="plates_price">%1$s INR</string>
+    <string name="tap_to_close">Tap to close</string>
+    <string name="total">Total</string>
+    <string name="tap_to_pay">Tap to Pay</string>
+    <string name="how_many_plates">How many plates?</string>
+    <string name="tap_to_continue">Tap to continue</string>
 </resources>

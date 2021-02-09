@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="@dimen/dimen_26dp"
-            android:text="Sheet 1"
+            android:text="Meal"
             android:textColor="@color/boldPink"
             android:textSize="32sp"
             android:textStyle="bold"
@@ -297,15 +297,22 @@
             app:layout_constraintTop_toTopOf="@+id/btn_sheet_1"
             app:layout_constraintVertical_bias="0.45999998" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
+        <androidx.constraintlayout.motion.widget.MotionLayout
             android:id="@+id/view_sheet_1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_130dp"
-            tools:visibility="visible"
-            android:visibility="gone"
-            >
+            android:visibility="visible"
+            app:layoutDescription="@xml/sheet_1_xml_view_sheet_1_scene"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.41" />
 
             <TextView
                 android:id="@+id/txt_selected_meal"
@@ -316,17 +323,18 @@
                 android:textColor="@color/white"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:visibility="visible"
                 android:id="@+id/tv_meal_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/main_course"
                 android:textColor="@color/boldPink"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/txt_selected_meal"
                 app:layout_constraintStart_toEndOf="@+id/txt_selected_meal"
                 app:layout_constraintTop_toTopOf="@+id/txt_selected_meal" />
@@ -352,7 +360,7 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_meal_result"
                 app:layout_constraintTop_toTopOf="@+id/txt_selected_diet" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.motion.widget.MotionLayout>
 
 
 
